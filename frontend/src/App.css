@@ -1118,3 +1118,183 @@ h1, h2, h3, strong { font-family: Arial, Helvetica, sans-serif; }
     text-align: left;
   }
 }
+
+/* Mobile responsive fixes */
+@media (max-width: 900px) {
+  .app-shell,
+  .dashboard,
+  .app-layout {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 84px;
+    min-width: 84px;
+  }
+
+  .sidebar-brand span,
+  .sidebar-section-title,
+  .sidebar-nav span,
+  .sidebar-footer {
+    display: none;
+  }
+
+  .sidebar-nav a,
+  .sidebar-nav button {
+    justify-content: center;
+    padding: 12px 8px;
+  }
+
+  .main-content,
+  .content,
+  .page-content {
+    min-width: 0;
+    width: calc(100vw - 84px);
+    overflow-x: hidden;
+  }
+
+  .welcome-row,
+  .balance-main,
+  .balance-side,
+  .stats-grid,
+  .service-grid,
+  .hero-grid {
+    min-width: 0;
+  }
+
+  .welcome-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .balance-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .balance-main {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .balance-side {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header,
+  .topbar {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .card,
+  .panel,
+  .transfer-card,
+  .form-card {
+    max-width: 100%;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 64px;
+    min-width: 64px;
+  }
+
+  .main-content,
+  .content,
+  .page-content {
+    width: calc(100vw - 64px);
+  }
+
+  .sidebar-brand {
+    padding: 16px 8px;
+  }
+
+  .sidebar-brand-mark {
+    margin: 0 auto;
+  }
+
+  .page-header,
+  .topbar {
+    padding: 16px;
+  }
+
+  .welcome-row h1,
+  .page-header h1 {
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .balance-card {
+    padding: 24px 18px;
+  }
+
+  .balance-main {
+    gap: 12px;
+  }
+
+  .balance-amount,
+  .balance-main .amount {
+    font-size: clamp(30px, 8vw, 42px);
+    word-break: break-word;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card,
+  .stat-card,
+  .account-card,
+  .transfer-card,
+  .form-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal,
+  .modal-content {
+    width: 100%;
+    max-width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+
+  .table-wrap,
+  .accounts-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 650px;
+  }
+}
